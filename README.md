@@ -20,7 +20,7 @@ For example, if you'd like voice attack to trigger the "calculator" command when
 
 `{OscAddressToSendTo}:{ParamList}`
 
-For example, if you'd like to send an integer of 3 to the `/chataigne/inputselector` address, you'd put the following into the plugin context:
+For example, if you'd like to send an integer of 2 to the `/chataigne/inputselector` address, you'd put the following into the plugin context:
 
 `/chataigne/inputselector:i 2`
 
