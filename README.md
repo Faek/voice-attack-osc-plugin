@@ -9,6 +9,10 @@ Disclaimer: There is no handling for if the OSC receiver disconnects for some re
 
 `{OscAddress};{VoiceAttackCommandName}`
 
+For example, if you'd like voice attack to trigger the "calculator" command when you hit the osc address of `/va/calculator`:
+
+`/va/calculator;calculator`
+
 # How to send OSC from VoiceAttack
 - Use Other > Advanced > Execute an External Plugin Function
 - In the plugin context put the Osc Address you'd like to send a message to
