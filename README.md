@@ -5,7 +5,7 @@ Disclaimer: There is no handling for if the OSC receiver disconnects for some re
 
 # How to Trigger Voice Attack commands via OSC
 - Extract plugin to Apps folder in voiceattack program files folder
-- Edit oscsettings.txt in the plugin folder, and add your OSC trigger address to command mapping in the following format:
+- Edit oscsettings.txt in the plugin folder, and add your OSC trigger addresses to command mapping in the following format (one mapping per line, as many mappings as you'd like):
 
 `{OscAddress};{VoiceAttackCommandName}`
 
