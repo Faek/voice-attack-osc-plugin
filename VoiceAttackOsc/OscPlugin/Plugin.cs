@@ -15,7 +15,7 @@ namespace VAOscPlugin
     {
 
         const string C_APP_NAME = "Lerk's Osc Plugin";
-        const string C_APP_VERSION = "v0.1";
+        const string C_APP_VERSION = "v0.2";
 
         private static OscReceiver _receiver;
         private static Task _receiverTask;
@@ -98,7 +98,14 @@ namespace VAOscPlugin
                             // this will block until one arrives or the socket is closed
                             OscPacket packet = _receiver.Receive();
                             var message = (OscMessage)packet;
-                            vaProxy.Command.Execute(commandDict[message.Address]);
+                            if (commandDict.ContainsKey(message.Address))
+                            {
+                                vaProxy.Command.Execute(commandDict[message.Address]);
+                            }
+                            else
+                            {
+                                vaProxy.WriteToLog($"OSC address not found in config: {message.Address}", "red");
+                            }
                         }
                     }
                 }
